@@ -1,12 +1,6 @@
-
-use std::io::{stdout, BufWriter};
-use ferris_says::say;
+mod day_1;
 
 fn main() {
-    let stdout = stdout();
-    let message = String::from("Hello fellow Rustaceans!");
-    let width = message.chars().count();
-
-    let mut writer = BufWriter::new(stdout.lock());
-    say(message.as_bytes(), width, &mut writer).unwrap();
+    let highest_calories = day_1::problem_2();
+    println!("{}", highest_calories);
 }
